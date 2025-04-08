@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$PROJECT_DIR$/../../../yangnan/Documents/Maven/reop/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
-          <entry name="$PROJECT_DIR$/../../../yangnan/Documents/Maven/reop/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
         <module name="rocketMQ-demo1" />
       </profile>
