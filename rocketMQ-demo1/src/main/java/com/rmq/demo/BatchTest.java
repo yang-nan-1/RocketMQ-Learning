@@ -33,6 +33,7 @@ public class BatchTest {
         producer.shutdown();
     }
 
+
     @Test
     public void batchConsumer() throws Exception{
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("batch-consumer-group");

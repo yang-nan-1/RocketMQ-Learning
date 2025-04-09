@@ -8,7 +8,7 @@ import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.common.message.Message;
 import org.junit.jupiter.api.Test;
 
-public class BASyncTest {
+public class ASyncTest {
     @Test
     public void asyncProducer () throws Exception{
         DefaultMQProducer producer = new DefaultMQProducer("async-producer-group");
