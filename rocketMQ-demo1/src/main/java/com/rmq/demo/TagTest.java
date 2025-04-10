@@ -20,7 +20,7 @@ public class TagTest {
      * @throws Exception
      */
     @Test
-    public void tagTest() throws Exception {
+    public void tagProducer() throws Exception {
 
         DefaultMQProducer producer = new DefaultMQProducer("tag-producer-group");
         producer.setNamesrvAddr(MqConstant.NAME_SERVER);
