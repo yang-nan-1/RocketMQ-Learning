@@ -44,6 +44,13 @@ class RocketMqDemo1ApplicationTests {
 		producer.shutdown();
 	}
 
+
+	/**
+	 *设计去重表 对消息添加唯一key
+	 * 每次消费消息时 先插入数据库 如果成功执行业务逻辑
+	 * 插入失败证明消息来过了，直接签收
+	 * @throws Exception
+	 */
 	@Test
 	void repeteConsumer() throws Exception {
 		DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("repete-consumer-group");
