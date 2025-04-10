@@ -1,41 +1,68 @@
 package com.rmq;
 
 import com.rmq.constant.MqConstant;
-import org.apache.rocketmq.client.exception.MQBrokerException;
-import org.apache.rocketmq.client.exception.MQClientException;
+import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
+import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext;
+import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;
+import org.apache.rocketmq.client.consumer.listener.MessageListenerConcurrently;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
-import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.common.message.Message;
-import org.apache.rocketmq.remoting.exception.RemotingException;
+import org.apache.rocketmq.common.message.MessageExt;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.jdbc.core.JdbcTemplate;
 
+import java.util.List;
+import java.util.UUID;
 
 
 @SpringBootTest
 class RocketMqDemo1ApplicationTests {
 
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+
 	/**
-	 * 发消息
+	 * 发重复消息
 	 */
 	@Test
-	void contextLoads() throws MQClientException, MQBrokerException, RemotingException, InterruptedException {
-		//创建一个生产者
-		DefaultMQProducer producer = new DefaultMQProducer("test-producer-group");
-		//连接nameserver
+	void repeatProducer() throws Exception {
+
+		DefaultMQProducer producer = new DefaultMQProducer("repeat-producer-group");
 		producer.setNamesrvAddr(MqConstant.NAME_SERVER);
-		//启动
 		producer.start();
+		String key = UUID.randomUUID().toString();
+		System.out.println(key);
 
-		//创建一个消息
-		Message message = new Message("testTopic","我是一个简单的消息".getBytes());
+		Message m1 = new Message("repeatTopic",null,key,"扣减库存-1".getBytes());
+		Message m1Repeat = new Message("repeatTopic",null,key,"扣减库存-1".getBytes());
 
-		//发送消息
-		SendResult sendResult = producer.send(message);
-		System.out.println(sendResult.getSendStatus());
-
-		//关闭生产者
+		producer.send(m1);
+		producer.send(m1Repeat);
+		System.out.println("发送成功");
 		producer.shutdown();
+	}
+
+	@Test
+	void repeteConsumer() throws Exception {
+		DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("repete-consumer-group");
+		consumer.setNamesrvAddr(MqConstant.NAME_SERVER);
+		consumer.subscribe("repeatTopic","*");
+		consumer.registerMessageListener(new MessageListenerConcurrently() {
+			@Override
+			public ConsumeConcurrentlyStatus consumeMessage(List<MessageExt> msgs, ConsumeConcurrentlyContext context) {
+				//先拿key
+				MessageExt messageExt = msgs.get(0);
+				String key = messageExt.getKeys();
+				//插入数据库，有主键做唯一索引
+				int i = jdbcTemplate.update("insert into order_oper_log(`type`,`order_sn`,`user`) values (1,?,'123')", key);
+				System.out.println(new String(messageExt.getBody()));
+				return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
+			}
+		});
+		consumer.start();
+		System.in.read();
 	}
 
 }
