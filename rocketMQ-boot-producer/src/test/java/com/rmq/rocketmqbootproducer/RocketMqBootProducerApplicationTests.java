@@ -78,4 +78,14 @@ class RocketMqBootProducerApplicationTests {
 
     }
 
+
+    //测试消费模式 集群模块 广播模式
+
+    @Test
+    void modeTest() throws Exception{
+        for (int i = 0; i < 10; i++) {
+            rocketMQTemplate.syncSend("modeTopic", "我是第"+i+"个集群模式的消息");
+        }
+    }
+
 }

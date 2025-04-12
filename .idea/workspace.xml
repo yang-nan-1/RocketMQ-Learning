@@ -4,29 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8108b13e-a093-4b39-8821-8db8176d20bc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/RocketMQ-Learning.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/main/java/com/rmq/c/RocketMqBootConsumerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/main/java/com/rmq/c/entity/MsgModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/main/java/com/rmq/c/listener/OrderlyMsgListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/main/java/com/rmq/c/listener/SimpleListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/main/java/com/rmq/c/listener/TagMsgListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/test/java/com/rmq/rocketmqbootconsumer/RocketMqBootConsumerApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-producer/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-producer/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-producer/src/main/java/com/rmq/p/RocketMqBootProducerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-producer/src/main/java/com/rmq/p/entity/MsgModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-producer/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-producer/src/test/java/com/rmq/rocketmqbootproducer/RocketMqBootProducerApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+    <list default="true" id="8108b13e-a093-4b39-8821-8db8176d20bc" name="Changes" comment="学习完原生的方法现在开始使用SpringBoot操作RocketMQ">
+      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/main/java/com/rmq/c/listener/C1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/main/java/com/rmq/c/listener/C2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/main/java/com/rmq/c/listener/C3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/main/java/com/rmq/c/listener/C4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rocketMQ-boot-producer/src/test/java/com/rmq/rocketmqbootproducer/RocketMqBootProducerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/rocketMQ-boot-producer/src/test/java/com/rmq/rocketmqbootproducer/RocketMqBootProducerApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,18 +27,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "yang-nan-1"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;yang-nan-1&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/yang-nan-1/RocketMQ-Learning.git",
-    "accountId": "e887c6ce-0d81-4829-82d5-62ca6f0e9fcb"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/yang-nan-1/RocketMQ-Learning.git&quot;,
+    &quot;accountId&quot;: &quot;e887c6ce-0d81-4829-82d5-62ca6f0e9fcb&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -65,11 +49,14 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2vZ3hQKY5RQLHF0g0jkr6HTdXxI" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -79,6 +66,7 @@
     "JUnit.RocketMqBootConsumerApplicationTests.contextLoads.executor": "Run",
     "JUnit.RocketMqBootProducerApplicationTests.contextLoads.executor": "Run",
     "JUnit.RocketMqBootProducerApplicationTests.contextLoads1.executor": "Run",
+    "JUnit.RocketMqBootProducerApplicationTests.modeTest.executor": "Run",
     "JUnit.RocketMqBootProducerApplicationTests.tagKeyTest.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -122,7 +110,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RocketMqBootProducerApplicationTests.tagKeyTest">
+  <component name="RunManager" selected="JUnit.RocketMqBootProducerApplicationTests.modeTest">
     <configuration name="RocketMqBootConsumerApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rocketMQ-boot-consumer" />
       <extension name="coverage">
@@ -155,7 +143,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RocketMqBootProducerApplicationTests.contextLoads1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RocketMqBootProducerApplicationTests.modeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rocketMQ-boot-producer" />
       <extension name="coverage">
         <pattern>
@@ -165,7 +153,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.rmq.rocketmqbootproducer" />
       <option name="MAIN_CLASS_NAME" value="com.rmq.rocketmqbootproducer.RocketMqBootProducerApplicationTests" />
-      <option name="METHOD_NAME" value="contextLoads1" />
+      <option name="METHOD_NAME" value="modeTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -201,19 +189,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.modeTest" />
       <item itemvalue="JUnit.RocketMqBootConsumerApplicationTests.contextLoads" />
-      <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.contextLoads1" />
       <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.tagKeyTest" />
       <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.contextLoads" />
       <item itemvalue="Spring Boot.RocketMqBootConsumerApplication " />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.tagKeyTest" />
+        <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.modeTest" />
         <item itemvalue="Spring Boot.RocketMqBootConsumerApplication " />
+        <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.tagKeyTest" />
         <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.contextLoads" />
         <item itemvalue="JUnit.RocketMqBootConsumerApplicationTests.contextLoads" />
-        <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.contextLoads1" />
       </list>
     </recent_temporary>
   </component>
@@ -233,8 +221,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1744338889322</updated>
-      <workItem from="1744338890815" duration="10441000" />
+      <workItem from="1744338890815" duration="11986000" />
+      <workItem from="1744444844377" duration="1337000" />
     </task>
+    <task id="LOCAL-00001" summary="学习完原生的方法现在开始使用SpringBoot操作RocketMQ">
+      <option name="closed" value="true" />
+      <created>1744352705594</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744352705594</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,5 +248,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="学习完原生的方法现在开始使用SpringBoot操作RocketMQ" />
+    <option name="LAST_COMMIT_MESSAGE" value="学习完原生的方法现在开始使用SpringBoot操作RocketMQ" />
   </component>
 </project>
