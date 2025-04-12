@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8108b13e-a093-4b39-8821-8db8176d20bc" name="Changes" comment="学习完原生的方法现在开始使用SpringBoot操作RocketMQ">
-      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/main/java/com/rmq/c/listener/C1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/main/java/com/rmq/c/listener/C2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/main/java/com/rmq/c/listener/C3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/main/java/com/rmq/c/listener/C4.java" afterDir="false" />
+    <list default="true" id="8108b13e-a093-4b39-8821-8db8176d20bc" name="Changes" comment="设置集群模式，测试负载均衡以及广播策略">
+      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/main/java/com/rmq/c/listener/JyListener1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/main/java/com/rmq/c/listener/JyListener2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/main/java/com/rmq/c/listener/C1.java" beforeDir="false" afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/main/java/com/rmq/c/listener/C1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rocketMQ-boot-producer/src/test/java/com/rmq/rocketmqbootproducer/RocketMqBootProducerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/rocketMQ-boot-producer/src/test/java/com/rmq/rocketmqbootproducer/RocketMqBootProducerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rocketMQ-boot-producer/target/test-classes/com/rmq/rocketmqbootproducer/RocketMqBootProducerApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/rocketMQ-boot-producer/target/test-classes/com/rmq/rocketmqbootproducer/RocketMqBootProducerApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +66,7 @@
     "JUnit.RocketMqBootConsumerApplicationTests.contextLoads.executor": "Run",
     "JUnit.RocketMqBootProducerApplicationTests.contextLoads.executor": "Run",
     "JUnit.RocketMqBootProducerApplicationTests.contextLoads1.executor": "Run",
+    "JUnit.RocketMqBootProducerApplicationTests.jyTest.executor": "Run",
     "JUnit.RocketMqBootProducerApplicationTests.modeTest.executor": "Run",
     "JUnit.RocketMqBootProducerApplicationTests.tagKeyTest.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
@@ -99,6 +100,9 @@
       <recent name="D:\Project training\learning\RocketMQ-Learning\rocketMQ-boot-consumer\src\main\java\com\rmq\c" />
       <recent name="D:\Project training\learning\RocketMQ-Learning\rocketMQ-boot-producer\src\main\java\com\rmq\p" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.rmq.c.listener" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -110,23 +114,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RocketMqBootProducerApplicationTests.modeTest">
-    <configuration name="RocketMqBootConsumerApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rocketMQ-boot-consumer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.rmq.rocketmqbootconsumer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.rmq.rocketmqbootconsumer" />
-      <option name="MAIN_CLASS_NAME" value="com.rmq.rocketmqbootconsumer.RocketMqBootConsumerApplicationTests" />
-      <option name="METHOD_NAME" value="contextLoads" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.RocketMqBootProducerApplicationTests.jyTest">
     <configuration name="RocketMqBootProducerApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rocketMQ-boot-producer" />
       <extension name="coverage">
@@ -138,6 +126,22 @@
       <option name="PACKAGE_NAME" value="com.rmq.rocketmqbootproducer" />
       <option name="MAIN_CLASS_NAME" value="com.rmq.rocketmqbootproducer.RocketMqBootProducerApplicationTests" />
       <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RocketMqBootProducerApplicationTests.jyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rocketMQ-boot-producer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rmq.rocketmqbootproducer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.rmq.rocketmqbootproducer" />
+      <option name="MAIN_CLASS_NAME" value="com.rmq.rocketmqbootproducer.RocketMqBootProducerApplicationTests" />
+      <option name="METHOD_NAME" value="jyTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -189,19 +193,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.jyTest" />
       <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.modeTest" />
-      <item itemvalue="JUnit.RocketMqBootConsumerApplicationTests.contextLoads" />
       <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.tagKeyTest" />
       <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.contextLoads" />
       <item itemvalue="Spring Boot.RocketMqBootConsumerApplication " />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.modeTest" />
+        <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.jyTest" />
         <item itemvalue="Spring Boot.RocketMqBootConsumerApplication " />
+        <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.modeTest" />
         <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.tagKeyTest" />
         <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.contextLoads" />
-        <item itemvalue="JUnit.RocketMqBootConsumerApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
   </component>
@@ -222,7 +226,7 @@
       <option name="presentableId" value="Default" />
       <updated>1744338889322</updated>
       <workItem from="1744338890815" duration="11986000" />
-      <workItem from="1744444844377" duration="1337000" />
+      <workItem from="1744444844377" duration="4023000" />
     </task>
     <task id="LOCAL-00001" summary="学习完原生的方法现在开始使用SpringBoot操作RocketMQ">
       <option name="closed" value="true" />
@@ -232,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744352705594</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="设置集群模式，测试负载均衡以及广播策略">
+      <option name="closed" value="true" />
+      <created>1744446446247</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1744446446247</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +263,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="学习完原生的方法现在开始使用SpringBoot操作RocketMQ" />
-    <option name="LAST_COMMIT_MESSAGE" value="学习完原生的方法现在开始使用SpringBoot操作RocketMQ" />
+    <MESSAGE value="设置集群模式，测试负载均衡以及广播策略" />
+    <option name="LAST_COMMIT_MESSAGE" value="设置集群模式，测试负载均衡以及广播策略" />
   </component>
 </project>

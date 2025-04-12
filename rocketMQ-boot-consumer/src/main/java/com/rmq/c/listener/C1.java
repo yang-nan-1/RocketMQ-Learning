@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 @RocketMQMessageListener(topic = "modeTopic",
         consumerGroup = "mode-consumer-group-a",
-        messageModel = MessageModel.CLUSTERING //集群模式
+        messageModel = MessageModel.CLUSTERING//集群模式
 )
 public class C1 implements RocketMQListener<String> {
     @Override
