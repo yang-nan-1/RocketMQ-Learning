@@ -88,4 +88,12 @@ class RocketMqBootProducerApplicationTests {
         }
     }
 
+    @Test
+    void jyTest() throws Exception{
+        for (int i = 0; i < 100000; i++) {
+            Thread.sleep(500);
+            rocketMQTemplate.syncSend("jyTopic", "我是第"+i+"个消息");
+        }
+    }
+
 }
