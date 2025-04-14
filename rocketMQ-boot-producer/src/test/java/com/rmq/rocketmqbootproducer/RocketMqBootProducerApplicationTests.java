@@ -88,6 +88,7 @@ class RocketMqBootProducerApplicationTests {
         }
     }
 
+    //积压问题
     @Test
     void jyTest() throws Exception{
         for (int i = 0; i < 100000; i++) {
@@ -96,4 +97,11 @@ class RocketMqBootProducerApplicationTests {
         }
     }
 
+
+    //轨迹问题
+    @Test
+    void traceTest() throws Exception{
+        rocketMQTemplate.syncSend("traceTopic", "我是第个消息");
+
+    }
 }

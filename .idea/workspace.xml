@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8108b13e-a093-4b39-8821-8db8176d20bc" name="Changes" comment="设置集群模式，测试负载均衡以及广播策略">
-      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/main/java/com/rmq/c/listener/JyListener1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/main/java/com/rmq/c/listener/JyListener2.java" afterDir="false" />
+    <list default="true" id="8108b13e-a093-4b39-8821-8db8176d20bc" name="Changes" comment="解决消息丢失问题">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/main/java/com/rmq/c/listener/C1.java" beforeDir="false" afterPath="$PROJECT_DIR$/rocketMQ-boot-consumer/src/main/java/com/rmq/c/listener/C1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rocketMQ-boot-producer/src/test/java/com/rmq/rocketmqbootproducer/RocketMqBootProducerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/rocketMQ-boot-producer/src/test/java/com/rmq/rocketmqbootproducer/RocketMqBootProducerApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rocketMQ-boot-producer/target/test-classes/com/rmq/rocketmqbootproducer/RocketMqBootProducerApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/rocketMQ-boot-producer/target/test-classes/com/rmq/rocketmqbootproducer/RocketMqBootProducerApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,40 +56,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.RocketMqBootConsumerApplicationTests.contextLoads.executor": "Run",
-    "JUnit.RocketMqBootProducerApplicationTests.contextLoads.executor": "Run",
-    "JUnit.RocketMqBootProducerApplicationTests.contextLoads1.executor": "Run",
-    "JUnit.RocketMqBootProducerApplicationTests.jyTest.executor": "Run",
-    "JUnit.RocketMqBootProducerApplicationTests.modeTest.executor": "Run",
-    "JUnit.RocketMqBootProducerApplicationTests.tagKeyTest.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.RocketMqBootConsumerApplication (1).executor": "Run",
-    "Spring Boot.RocketMqBootConsumerApplication .executor": "Run",
-    "Spring Boot.RocketMqBootProducerApplication (1).executor": "Run",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "corretto-17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Project training/learning/RocketMQ-Learning/rocketMQ-boot-consumer/src/main/java/com/rmq/c",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.24712643",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.RocketMqBootConsumerApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RocketMqBootProducerApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RocketMqBootProducerApplicationTests.contextLoads1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RocketMqBootProducerApplicationTests.jyTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RocketMqBootProducerApplicationTests.modeTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RocketMqBootProducerApplicationTests.tagKeyTest.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.RocketMqBootConsumerApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.RocketMqBootConsumerApplication .executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.RocketMqBootProducerApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Project training/learning/RocketMQ-Learning/rocketMQ-boot-consumer/src/main/java/com/rmq/c&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.24712643&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Project training\learning\RocketMQ-Learning\rocketMQ-boot-consumer\src\main\java\com\rmq\c" />
@@ -193,10 +188,10 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.contextLoads" />
       <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.jyTest" />
       <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.modeTest" />
       <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.tagKeyTest" />
-      <item itemvalue="JUnit.RocketMqBootProducerApplicationTests.contextLoads" />
       <item itemvalue="Spring Boot.RocketMqBootConsumerApplication " />
     </list>
     <recent_temporary>
@@ -226,7 +221,11 @@
       <option name="presentableId" value="Default" />
       <updated>1744338889322</updated>
       <workItem from="1744338890815" duration="11986000" />
-      <workItem from="1744444844377" duration="4023000" />
+      <workItem from="1744444844377" duration="4772000" />
+      <workItem from="1744451619858" duration="2000" />
+      <workItem from="1744453495340" duration="11000" />
+      <workItem from="1744459813097" duration="799000" />
+      <workItem from="1744620653896" duration="817000" />
     </task>
     <task id="LOCAL-00001" summary="学习完原生的方法现在开始使用SpringBoot操作RocketMQ">
       <option name="closed" value="true" />
@@ -244,7 +243,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744446446247</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="解决消息堆积问题：&#10;增加消费者数量,但是消费者数量&lt;=队列数量,适当的设置最大的消费线程数量(根据IO(2n)/CPU(n+1))&#10;动态扩容队列数量,从而增加消费者数量">
+      <option name="closed" value="true" />
+      <created>1744448876986</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1744448876986</updated>
+    </task>
+    <task id="LOCAL-00004" summary="解决消息堆积问题：&#10;增加消费者数量,但是消费者数量&lt;=队列数量,适当的设置最大的消费线程数量(根据IO(2n)/CPU(n+1))&#10;动态扩容队列数量,从而增加消费者数量">
+      <option name="closed" value="true" />
+      <created>1744449416640</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1744449416640</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +279,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="学习完原生的方法现在开始使用SpringBoot操作RocketMQ" />
     <MESSAGE value="设置集群模式，测试负载均衡以及广播策略" />
-    <option name="LAST_COMMIT_MESSAGE" value="设置集群模式，测试负载均衡以及广播策略" />
+    <MESSAGE value="解决消息堆积问题：&#10;增加消费者数量,但是消费者数量&lt;=队列数量,适当的设置最大的消费线程数量(根据IO(2n)/CPU(n+1))&#10;动态扩容队列数量,从而增加消费者数量" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决消息堆积问题：&#10;增加消费者数量,但是消费者数量&lt;=队列数量,适当的设置最大的消费线程数量(根据IO(2n)/CPU(n+1))&#10;动态扩容队列数量,从而增加消费者数量" />
   </component>
 </project>
