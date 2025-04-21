@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="seckill-web" />
+        <module name="seckill-service" />
         <module name="rocketMQ-demo1" />
         <module name="rocketMQ-boot-consumer" />
         <module name="rocketMQ-boot-producer" />
@@ -19,6 +20,7 @@
       <module name="rocketMQ-boot-consumer" options="-parameters" />
       <module name="rocketMQ-boot-producer" options="-parameters" />
       <module name="rocketMQ-demo1" options="-parameters" />
+      <module name="seckill-service" options="-parameters" />
       <module name="seckill-web" options="-parameters" />
     </option>
   </component>
