@@ -30,7 +30,7 @@ public class DataSync {
     //这里为了测试把定时任务改成了每次启动后执行
     @PostConstruct
     public void initData(){
-        List<Goods> goodsList=goodsMapper.selectList(null);
+        List<Goods> goodsList=goodsMapper.selectSeckillGoods();
         if(CollectionUtils.isEmpty(goodsList))
             return;
 

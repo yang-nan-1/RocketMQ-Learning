@@ -10,6 +10,7 @@ import org.apache.ibatis.annotations.Mapper;
 * @createDate 2025-04-21 15:40:06
 * @Entity com.rmq.seckillservice.entity.OrderRecords
 */
+@Mapper
 public interface OrderRecordsMapper extends BaseMapper<OrderRecords> {
 
 }

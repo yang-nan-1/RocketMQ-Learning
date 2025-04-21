@@ -15,4 +15,6 @@ server:
 
 rocketmq:
     name-server: 192.168.30.129:9876
+    producer:
+        group: seckill-producer-group
 

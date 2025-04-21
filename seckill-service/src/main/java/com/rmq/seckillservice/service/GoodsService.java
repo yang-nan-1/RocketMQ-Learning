@@ -12,4 +12,5 @@ import org.springframework.stereotype.Service;
 
 public interface GoodsService extends IService<Goods> {
 
+    void realSeckill(Integer userId, Integer goodsId);
 }

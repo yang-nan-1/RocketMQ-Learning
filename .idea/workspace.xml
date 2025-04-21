@@ -4,15 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb2c02c7-853e-493e-9a1e-524a74e34b87" name="Changes" comment="对业务流程解耦，写成异步操作，对数据库的io操作放到service中通过mq向service发送消息，完成io操作，可提升接口的qts">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seckill-web/src/main/java/com/rmq/seckill/controller/SeckillController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="eb2c02c7-853e-493e-9a1e-524a74e34b87" name="Changes" comment="先创建两个端口的服务来模拟异步的过程">
+      <change afterPath="$PROJECT_DIR$/seckill-service/src/main/java/com/rmq/seckillservice/listener/SeckillListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seckill-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/seckill-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seckill-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/seckill-web/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seckill-service/src/main/java/com/rmq/seckillservice/SeckillServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/seckill-service/src/main/java/com/rmq/seckillservice/SeckillServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seckill-service/src/main/java/com/rmq/seckillservice/config/DataSync.java" beforeDir="false" afterPath="$PROJECT_DIR$/seckill-service/src/main/java/com/rmq/seckillservice/config/DataSync.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seckill-service/src/main/java/com/rmq/seckillservice/mapper/GoodsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/seckill-service/src/main/java/com/rmq/seckillservice/mapper/GoodsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seckill-service/src/main/java/com/rmq/seckillservice/mapper/OrderRecordsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/seckill-service/src/main/java/com/rmq/seckillservice/mapper/OrderRecordsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seckill-service/src/main/java/com/rmq/seckillservice/service/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/seckill-service/src/main/java/com/rmq/seckillservice/service/GoodsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seckill-service/src/main/java/com/rmq/seckillservice/service/impl/GoodsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/seckill-service/src/main/java/com/rmq/seckillservice/service/impl/GoodsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seckill-service/src/main/resources/com/rmq/seckillservice/mapper/GoodsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/seckill-service/src/main/resources/com/rmq/seckillservice/mapper/GoodsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seckill-web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/seckill-web/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,18 +35,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "yang-nan-1"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;yang-nan-1&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/yang-nan-1/RocketMQ-Learning.git",
-    "accountId": "e887c6ce-0d81-4829-82d5-62ca6f0e9fcb"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/yang-nan-1/RocketMQ-Learning.git&quot;,
+    &quot;accountId&quot;: &quot;e887c6ce-0d81-4829-82d5-62ca6f0e9fcb&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/seckill-web/src/main/resources/application.yml" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -54,9 +60,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2w1Ov9NuJzZeFWaxuyA7zvVzS5i" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -64,8 +70,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.SeckillServiceApplication.executor": "Run",
+    "Spring Boot.SeckillWebApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "openjdk-22",
     "kotlin-language-version-configured": "true",
@@ -74,11 +86,21 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.24712643",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.SeckillWebApplication">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SeckillServiceApplication">
     <configuration name="SeckillServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="seckill-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.rmq.seckillservice.SeckillServiceApplication" />
@@ -110,7 +132,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745205840119</updated>
-      <workItem from="1745205841518" duration="1746000" />
+      <workItem from="1745205841518" duration="9646000" />
+      <workItem from="1745224772743" duration="2302000" />
     </task>
     <task id="LOCAL-00001" summary="研究高并发场景下mq的应用">
       <option name="closed" value="true" />
@@ -128,7 +151,23 @@
       <option name="project" value="LOCAL" />
       <updated>1745206366906</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="先创建两个端口的服务来模拟异步的过程">
+      <option name="closed" value="true" />
+      <created>1745222024103</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1745222024103</updated>
+    </task>
+    <task id="LOCAL-00004" summary="先创建两个端口的服务来模拟异步的过程">
+      <option name="closed" value="true" />
+      <created>1745222039091</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1745222039091</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +176,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="研究高并发场景下mq的应用" />
     <MESSAGE value="对业务流程解耦，写成异步操作，对数据库的io操作放到service中通过mq向service发送消息，完成io操作，可提升接口的qts" />
-    <option name="LAST_COMMIT_MESSAGE" value="对业务流程解耦，写成异步操作，对数据库的io操作放到service中通过mq向service发送消息，完成io操作，可提升接口的qts" />
+    <MESSAGE value="先创建两个端口的服务来模拟异步的过程" />
+    <option name="LAST_COMMIT_MESSAGE" value="先创建两个端口的服务来模拟异步的过程" />
   </component>
 </project>
