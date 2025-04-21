@@ -71,7 +71,7 @@ class RocketMqBootProducerApplicationTests {
 
     @Test
     void tagKeyTest() throws Exception{
-        rocketMQTemplate.syncSend(" :tagA","我是一个带tag的消息");
+        rocketMQTemplate.syncSend("bootTestTopic:tagA","我是一个带tag的消息");
 
         Message<String> m = MessageBuilder.withPayload("我是一个带key的消息").setHeader(RocketMQHeaders.KEYS, "key1").build();
         rocketMQTemplate.syncSend("bootTestTopic",m);
